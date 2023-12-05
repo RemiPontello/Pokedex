@@ -1,0 +1,25 @@
+.formfiltre {
+    text-align: center;
+}
+
+.filtre {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.selgen,
+.seltype {
+    padding: 5px;
+    font-size: 16px;
+    color: black; 
+    background-color: transparent; 
+    border: 1px solid black; 
+    width: 150%;
+}
+
+/* Ajouter un espace en haut et en bas du formulaire */
+.formfiltre {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
