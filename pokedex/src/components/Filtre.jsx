@@ -5,6 +5,7 @@ function Filtre(){
         <form className='formfiltre'>
         <div className='filtre'>
             <div className='gen'>
+                <h4>Génération</h4>
                 <select className='selgen'>
                     <option>1</option>
                     <option>2</option>
@@ -14,6 +15,7 @@ function Filtre(){
                 </select>
             </div>
             <div className='type'>
+            <h4>Type</h4>
             <select className='seltype'>
                     <option>Feu</option>
                     <option>Eau</option>
