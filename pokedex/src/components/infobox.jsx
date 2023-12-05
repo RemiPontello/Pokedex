@@ -1,8 +1,9 @@
 import './infobox.css';
 
-function infobox(props){
+function Infobox(props){
 
     return(
+        
         <div className='box'>
             <div className='info'>
                     <p>info pokemon</p>
@@ -14,4 +15,4 @@ function infobox(props){
 }
 
 
-export default infobox
+export default Infobox

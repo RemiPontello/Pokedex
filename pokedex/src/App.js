@@ -1,12 +1,14 @@
 import './App.css';
-import '../src/components/infobox.jsx';
+import React from 'react';
+import Infobox from './components/Infobox';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <Infobox />
       </header>
-      <infobox />
+      
     </div>
   );
 }
