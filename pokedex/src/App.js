@@ -5,10 +5,8 @@ import Infobox from './components/Infobox';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <h1>Pokédex</h1>
       <Infobox />
-      </header>
-      
     </div>
   );
 }
