@@ -6,7 +6,7 @@ function Infobox(props){
         
         <div className='box'>
             <div className='info'>
-                    <p>info pokemon</p>
+                    
             </div>
 
         </div>

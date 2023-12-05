@@ -6,8 +6,22 @@ function App() {
   return (
     <div className="App">
       <h1>Pokédex</h1>
+      <div className='divbox'>
       <Infobox />
+      <Infobox />
+      <Infobox />
+      <Infobox />
+      <Infobox />
+      <Infobox />  {/*ligne1*/}
+      <Infobox /> 
+      <Infobox /> 
+      <Infobox /> 
+      <Infobox /> 
+      <Infobox /> 
+      <Infobox /> 
+      </div>
     </div>
+    
   );
 }
 

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #F4E635;
 }
 
 .App-logo {
@@ -37,8 +38,12 @@
 
 h1{
   color: black;
-
+  position: inherit;
 }
-
+.divbox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 
