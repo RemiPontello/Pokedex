@@ -1,7 +1,6 @@
 import './App.css';
 import React from 'react';
 import Infobox from './components/Infobox';
-import Animation from './Animation';
 
 function App() {
   return (
