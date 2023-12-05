@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import Infobox from './components/Infobox';
+import Animation from './Animation';
 
 function App() {
   return (
@@ -18,8 +19,15 @@ function App() {
       <Infobox /> 
       <Infobox /> 
       <Infobox /> 
-      <Infobox /> 
+      <Infobox /> {/*ligne2*/}
+      <Infobox />
+      <Infobox />
+      <Infobox />
+      <Infobox />
+      <Infobox />
+      <Infobox /> {/*ligne3*/}
       </div>
+      <div className='pokeball'></div>
     </div>
     
   );
