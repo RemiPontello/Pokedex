@@ -4,8 +4,6 @@
     margin-top: -115px;
     margin-bottom: 20px;
     margin-left: auto;
-    border: 2px solid black;
-    border-radius: 10px;
 
 }
 .formtri{
@@ -21,7 +19,6 @@
 .ordre,
 .par {
     justify-content: space-around;
-    
 }
 
 .selpar,
