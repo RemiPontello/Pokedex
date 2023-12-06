@@ -2,12 +2,14 @@ import './App.css';
 import React from 'react';
 import Infobox from './components/Infobox';
 import Filtre from './components/Filtre';
+import Tri from './components/Tri';
 
 function App() {
   return (
     <div className="App">
       <h1>Pokédex</h1>
       <div className='fil'> <Filtre /> </div>
+      <div className='tris'> <Tri /> </div>
       <div className='divbox'>
       <Infobox />
       <Infobox />
