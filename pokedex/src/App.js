@@ -9,8 +9,7 @@ function App() {
     <div className="App">
       <h1>Pokédex</h1>
       <div className='fil'> <Filtre /> </div>
-      <div className='tris'> <Tri /> </div>
-      
+      <div className='tris'> <Tri /> </div>  
       <div className='divbox'>
       <Infobox />
       <Infobox />
