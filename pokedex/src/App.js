@@ -3,13 +3,15 @@ import React from 'react';
 import Infobox from './components/Infobox';
 import Filtre from './components/Filtre';
 import Tri from './components/Tri';
+import Modal from './components/Modal';
 
 function App() {
   return (
     <div className="App">
       <h1>Pokédex</h1>
       <div className='fil'> <Filtre /> </div>
-      <div className='tris'> <Tri /> </div>  
+      <div className='tris'> <Tri /> </div> 
+    
       <div className='divbox'>
       <Infobox />
       <Infobox />
