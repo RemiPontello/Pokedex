@@ -3,7 +3,6 @@ import React from 'react';
 import Infobox from './components/Infobox';
 import Filtre from './components/Filtre';
 import Tri from './components/Tri';
-import Modal from './components/Modal';
 
 function App() {
   return (
