@@ -4,7 +4,6 @@ import Infobox from './components/Infobox';
 import Filtre from './components/Filtre';
 import Tri from './components/Tri';
 
-
 function App() {
   return (
     <div className="App">
