@@ -29,7 +29,8 @@ function App() {
       <Infobox />
       <Infobox />
       <Infobox />
-      <Infobox /> {/*ligne3*/}
+      <Infobox />{/*ligne3*/}
+      <Infobox />  
       </div>
     </div>
     
