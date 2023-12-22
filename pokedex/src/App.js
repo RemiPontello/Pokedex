@@ -1,13 +1,18 @@
+// App.js
 import React from 'react';
-import Pokedex from './Pokedex';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './Home';
+import PokemonDetails from './PokemonDetails';
 
 function App() {
   return (
-    <div className="App">
-      <Pokedex />
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/pokemon/:pokemonId" component={PokemonDetails} />
+      </Switch>
+    </Router>
   );
 }
 
 export default App;
-
