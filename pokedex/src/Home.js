@@ -15,8 +15,9 @@ const Home = () => {
       try {
         const response = await fetch('https://pokedex-api.3rgo.tech/api/pokemon');
         const data = await response.json();
-        setPokemonList(data);
-        setFilteredPokemonList(data);  // Assuming initial filtered list is the same as the full list
+        console.log(data)
+        setPokemonList(data.data);
+        setFilteredPokemonList(data.data);  // Assuming initial filtered list is the same as the full list
       } catch (error) {
         console.error('Error fetching Pokemon data:', error);
       }
@@ -147,8 +148,8 @@ const Home = () => {
         {filteredPokemonList.map((pokemon) => (
           <li key={pokemon.id}>
             <Link to={`/pokemon/${pokemon.id}`}>
-              <img src={pokemon.image} alt={pokemon.name} />
-              {pokemon.number} - {pokemon.name}
+              <img src={pokemon.image} alt={pokemon.name['en']} />
+              {pokemon.number} - {pokemon.name['en']}
             </Link>
           </li>
         ))}
