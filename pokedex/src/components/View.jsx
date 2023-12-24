@@ -2,6 +2,7 @@ import Infobox from './Infobox';
 import Filtre from './Filtre';
 import Tri from './Tri';
 import Dat from '../data/Dat';
+import '../App.css';
 
 
 export default function View(){
