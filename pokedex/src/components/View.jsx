@@ -1,7 +1,6 @@
 import Infobox from './Infobox';
 import Filtre from './Filtre';
 import Tri from './Tri';
-import Dat from '../data/Dat';
 import '../App.css';
 
 
@@ -11,7 +10,7 @@ export default function View(){
           <h1>Pokédex</h1>
           <div className='fil'> <Filtre /> </div>
           <div className='tris'> <Tri /> </div> 
-          <Dat />
+          
           <div className='divbox'>
           <Infobox />
           <Infobox />
