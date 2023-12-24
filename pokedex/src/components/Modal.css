@@ -1,0 +1,22 @@
+.mod {
+    width: 25%; /* Un quart de la page */
+    height: 100vh; /* 100% de la hauteur de la vue */
+    background-color: yellow; /* Couleur jaune */
+    border-radius: 10px; /* Border-radius de 10px */
+    padding: 10px; /* Espace intérieur pour le contenu */
+    box-sizing: border-box; /* Inclure la bordure et le rembourrage dans la largeur/hauteur totale */
+  }
+  
+  .bcbut {
+    background-color: white; /* Couleur de fond blanche pour le bouton */
+    border: none; /* Pas de bordure */
+    padding: 10px; /* Espace intérieur pour le texte du bouton */
+    border-radius: 5px; /* Border-radius de 5px pour adoucir les coins */
+    cursor: pointer; /* Curseur pointer pour indiquer l'interaction */
+  }
+  
+  /* Facultatif : Ajouter du style au survol du bouton */
+  .bcbut:hover {
+    background-color: #f0f0f0; /* Changer la couleur de fond au survol */
+  }
+  

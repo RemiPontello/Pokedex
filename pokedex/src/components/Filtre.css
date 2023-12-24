@@ -1,0 +1,33 @@
+.formfiltre {
+    text-align: center;
+    width: 50%;
+}
+
+.filtre {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin: 10px 0;
+    margin-left: 3%;
+}
+
+.selgen,
+.seltype {
+    padding: 5px;
+    font-size: 16px;
+    color: black;
+    border-radius: 10px;
+    width: 200%;
+    margin-left: 0;
+}
+
+.formfiltre {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+h4{
+    text-align: start;
+}
+.type{
+    margin-left: -250px;
+}
