@@ -1,4 +1,3 @@
-// PokemonList.js
 import React from 'react';
 //import PokemonDetail from './PokemonDetail';
 

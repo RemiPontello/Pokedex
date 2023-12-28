@@ -1,4 +1,3 @@
-// PokemonDetail.js
 import React from 'react';
 
 const PokemonDetail = ({ pokemon, onBackClick }) => {

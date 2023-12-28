@@ -1,9 +1,9 @@
-// App.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PokemonList from './PokemonList';
 import Filter from './Filter';
 import PokemonDetail from './PokemonDetail';
+import './App.css';
 
 const App = () => {
   const [pokemonList, setPokemonList] = useState([]);
@@ -75,7 +75,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <Filter
         generations={generations}
         types={types}

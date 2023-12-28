@@ -1,4 +1,3 @@
-// Filter.js
 import React from 'react';
 
 const Filter = ({ generations, types, onFilterChange, onSortChange, onSearchChange, onFilterClick }) => {
