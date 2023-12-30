@@ -16,11 +16,13 @@ const Filter = ({ generations, types, onFilterChange, onSortChange, onSearchChan
       <label>Type:</label>
       <select onChange={(e) => onFilterChange('type', e.target.value)}>
         <option value="">All</option>
-        {types.map((type) => (
-          <option key={type} value={type}>
-            {type}
-          </option>
-        ))}
+        {types
+          .sort((a, b) => parseInt(a) - parseInt(b)) 
+          .map((type) => (
+            <option key={type} value={type}>
+              {type}
+            </option>
+    ))}
       </select>
 
       <label>Sort By:</label>

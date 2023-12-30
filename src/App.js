@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PokemonList from './PokemonList';
@@ -6,7 +7,8 @@ import PokemonDetail from './PokemonDetail';
 import './App.css';
 
 const App = () => {
-  const [pokemonList, setPokemonList] = useState([]);
+  const [originalPokemonList, setOriginalPokemonList] = useState([]);
+  const [filteredPokemonList, setFilteredPokemonList] = useState([]);
   const [generations, setGenerations] = useState([]);
   const [types, setTypes] = useState([]);
   const [filters, setFilters] = useState({
@@ -22,7 +24,8 @@ const App = () => {
       try {
         const response = await axios.get('https://pokedex-api.3rgo.tech/api/pokemon');
         const data = response.data.data;
-        setPokemonList(data);
+        setOriginalPokemonList(data);
+        setFilteredPokemonList(data);
         setGenerations([...new Set(data.map((pokemon) => pokemon.generation))]);
         setTypes([...new Set(data.flatMap((pokemon) => pokemon.types))]);
       } catch (error) {
@@ -34,36 +37,51 @@ const App = () => {
   }, []);
 
   const filterAndSortPokemon = () => {
-    let filteredPokemon = pokemonList;
-
+    let filteredPokemon = originalPokemonList;
+  
     if (filters.generation) {
-      filteredPokemon = filteredPokemon.filter((pokemon) => pokemon.generation === filters.generation);
+      filteredPokemon = filteredPokemon.filter(
+        (pokemon) => pokemon.generation.toString() === filters.generation
+      );
     }
-
+  
     if (filters.type) {
-      filteredPokemon = filteredPokemon.filter((pokemon) => pokemon.types.includes(filters.type));
+      const selectedType = parseInt(filters.type, 10);
+      filteredPokemon = filteredPokemon.filter((pokemon) =>
+        pokemon.types.includes(selectedType)
+      );
     }
-
+  
     if (search) {
       filteredPokemon = filteredPokemon.filter((pokemon) =>
         pokemon.name.en.toLowerCase().includes(search.toLowerCase())
       );
     }
-
+  
     filteredPokemon.sort((a, b) => {
-      if (sort === 'number') return a.id - b.id;
-      if (sort === 'name') return a.name.en.localeCompare(b.name.en);
-      if (sort === 'weight') return a.weight - b.weight;
-      if (sort === 'height') return a.height - b.height;
-      return 0;
+      switch (sort) {
+        case 'number':
+          return a.id - b.id;
+        case 'name':
+          return a.name.en.localeCompare(b.name.en);
+        case 'weight':
+          return a.weight - b.weight;
+        case 'height':
+          return a.height - b.height;
+        default:
+          return 0;
+      }
     });
-
-    return filteredPokemon;
+  
+    setFilteredPokemonList([...filteredPokemon]);
   };
+  
 
+  
+  
+  
   const handleFilterClick = () => {
-    const filteredPokemon = filterAndSortPokemon();
-    setPokemonList(filteredPokemon);
+    filterAndSortPokemon();
   };
 
   const handlePokemonClick = (pokemon) => {
@@ -85,9 +103,9 @@ const App = () => {
         onFilterClick={handleFilterClick}
       />
       {selectedPokemon ? (
-        <PokemonDetail pokemon={selectedPokemon} onBackClick={handleBackClick}/>
+        <PokemonDetail pokemon={selectedPokemon} onBackClick={handleBackClick} />
       ) : (
-        <PokemonList pokemonList={pokemonList} onPokemonClick={handlePokemonClick} />
+        <PokemonList pokemonList={filteredPokemonList} onPokemonClick={handlePokemonClick} />
       )}
     </div>
   );
