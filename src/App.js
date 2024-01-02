@@ -94,7 +94,9 @@ const App = () => {
 
   return (
     <div className="container">
-      <Filter
+      <h2 className='title'>Pokedex</h2>
+      <div className='filtre'>
+      <Filter 
         generations={generations}
         types={types}
         onFilterChange={(key, value) => setFilters({ ...filters, [key]: value })}
@@ -102,6 +104,7 @@ const App = () => {
         onSearchChange={(value) => setSearch(value)}
         onFilterClick={handleFilterClick}
       />
+      </div>
       {selectedPokemon ? (
         <PokemonDetail pokemon={selectedPokemon} onBackClick={handleBackClick} />
       ) : (

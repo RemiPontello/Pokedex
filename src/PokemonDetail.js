@@ -1,5 +1,5 @@
 import React,  { useState } from 'react';
-
+import './App.css';
 
 
 
@@ -52,7 +52,7 @@ const PokemonDetail = ({ pokemon, pokemonList, onBackClick }) => {
           ))}
         </ul>
       </div>
-      <button onClick={onBackClick} style={{ fontSize: '20px', padding: '10px' }} >Back</button>
+      <button onClick={onBackClick} style={{ fontSize: '20px', padding: '10px' }} >Retour</button>
     </div>
   );
 };
