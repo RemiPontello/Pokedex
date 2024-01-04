@@ -26,8 +26,8 @@ const PokemonDetail = ({ pokemon, pokemonList, onBackClick }) => {
       <p>Name: {pokemon.name.en}</p>
       <p>Generation: {pokemon.generation} </p>
       <p>Types: {pokemon.types.join(', ')}</p>
-      <p>Height: {pokemon.height}</p>
-      <p>Weight: {pokemon.weight}</p>
+      <p>Height: {pokemon.height} m</p>
+      <p>Weight: {pokemon.weight} kg</p>
       <p>Statistics:</p>
       <ul>
         {Object.entries(pokemon.stats).map(([statName, statValue]) => (
@@ -38,8 +38,8 @@ const PokemonDetail = ({ pokemon, pokemonList, onBackClick }) => {
       <div style={{ marginLeft: '20px' }}>
         <p>Evolved from:</p>
         <ul>
-          {Object.entries(pokemon.evolvedFrom).map(([id, niveau]) => (
-            <li key={id}>{`${id}: ${niveau}`}</li>
+          {Object.entries(pokemon.evolvedFrom).map(([id, niveau,]) => (
+            <li key={id}>#{`${id}: ${niveau}`}</li>
           ))}
         </ul>
       </div>
@@ -48,7 +48,7 @@ const PokemonDetail = ({ pokemon, pokemonList, onBackClick }) => {
         <p>Evolved to:</p>
         <ul>
           {Object.entries(pokemon.evolvesTo).map(([id, niveau]) => (
-            <li key={id}>{`${id}: ${niveau}`}</li>
+            <li key={id}>#{`${id}: ${niveau}`}</li>
           ))}
         </ul>
       </div>

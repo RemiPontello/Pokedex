@@ -11,7 +11,7 @@ const PokemonList = ({ pokemonList, onPokemonClick }) => {
           style={{ border: '1px solid #ddd', padding: '10px', margin: '5px', cursor: 'pointer' }}
           onClick={() => onPokemonClick(pokemon)}
         >
-          <img className='imgpoke' src={pokemon.image} alt={pokemon.name.en} />
+          <img className='imgpoke' src={pokemon.image} alt={pokemon.name.fr} />
           <div className='namepoke'>{pokemon.name.en}</div>
           <div className='boxtypes'> <p>Type:  </p>{pokemon.types.join(' , ')}</div>
           <div className='genpoke'>{pokemon.generation}</div>
