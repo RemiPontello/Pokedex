@@ -6,6 +6,9 @@ import Filter from './Filter';
 import PokemonDetail from './PokemonDetail';
 import './App.css';
 
+
+
+
 const App = () => {
   const [originalPokemonList, setOriginalPokemonList] = useState([]);
   const [filteredPokemonList, setFilteredPokemonList] = useState([]);
@@ -18,6 +21,7 @@ const App = () => {
   const [sort, setSort] = useState('number');
   const [search, setSearch] = useState('');
   const [selectedPokemon, setSelectedPokemon] = useState(null);
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,6 +39,7 @@ const App = () => {
 
     fetchData();
   }, []);
+
 
   const filterAndSortPokemon = () => {
     let filteredPokemon = originalPokemonList;
@@ -77,9 +82,10 @@ const App = () => {
   };
   
 
-  
-  
-  
+  useEffect(() => {
+    filterAndSortPokemon();
+  }, [filters, sort, search]);
+
   const handleFilterClick = () => {
     filterAndSortPokemon();
   };

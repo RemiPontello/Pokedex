@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 //import PokemonDetail from './PokemonDetail';
 
+
 const PokemonList = ({ pokemonList, onPokemonClick }) => {
   return (
     <div className='box'>
@@ -14,6 +15,7 @@ const PokemonList = ({ pokemonList, onPokemonClick }) => {
           <img className='imgpoke' src={pokemon.image} alt={pokemon.name.fr} />
           <div className='namepoke'>{pokemon.name.en}</div>
           <div className='boxtypes'> <p>Type:  </p>{pokemon.types.join(' , ')}</div>
+         
           <div className='genpoke'>{pokemon.generation}</div>
           <div className='idpoke'>#{pokemon.id}</div>
         </div>

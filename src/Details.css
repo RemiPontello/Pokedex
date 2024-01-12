@@ -1,0 +1,49 @@
+.shinybutton{
+    width: 8%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: #97d4e0;
+    cursor:pointer;
+    font-size: 15px;
+}
+
+.tree {
+    width: 50%;
+    justify-content: center;
+    border: solid 2px black;
+    border-radius: 10px;
+    margin-top: 1%;
+    margin-left: 25%;
+}
+
+.stats{
+    width: 50%;
+    justify-content: center;
+    border: solid 2px black;
+    border-radius: 10px;
+    margin-top: 1%;
+    margin-left: 25%;
+}
+
+.info{
+    width: 50%;
+    justify-content: center;
+    border: solid 2px black;
+    border-radius: 10px;
+    margin-left: 25%;
+}
+
+.backbutton{
+    width: 10%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: #97d4e0;
+    cursor:pointer;
+    font-size: 20px;
+    margin-top: 1.5%;
+   justify-content: center;
+}
+
+  

@@ -1,4 +1,5 @@
 import React,  { useState } from 'react';
+import './Details.css';
 import './App.css';
 
 
@@ -12,8 +13,8 @@ const PokemonDetail = ({ pokemon, pokemonList, onBackClick }) => {
     <div>
       <h2>{pokemon.name.en}</h2>
       <div>
-        <label>Display:</label>
-        <button onClick={handleToggleShiny} style={{ marginLeft: '10px' }}>
+        <label>Display: </label>
+        <button onClick={handleToggleShiny} className='shinybutton'>
           {displayShiny ? 'Regular' : 'Shiny'}
         </button>
       </div>
@@ -22,37 +23,41 @@ const PokemonDetail = ({ pokemon, pokemonList, onBackClick }) => {
         alt={pokemon.name.en}
         style={{ width: '200px', height: '200px', marginRight: '100px' }}
       />
-      <p>ID: {pokemon.id}</p>
+      <div className='info'>
+      <p>ID: #{pokemon.id}</p><br></br>
       <p>Name: {pokemon.name.en}</p>
       <p>Generation: {pokemon.generation} </p>
       <p>Types: {pokemon.types.join(', ')}</p>
       <p>Height: {pokemon.height} m</p>
       <p>Weight: {pokemon.weight} kg</p>
+      </div>
+      <div className='stats'>
       <p>Statistics:</p>
-      <ul>
         {Object.entries(pokemon.stats).map(([statName, statValue]) => (
           <li key={statName}>{`${statName}: ${statValue}`}</li>
         ))}
-      </ul>
+      </div>
+      <div className='tree'>
       <p>Evolution Tree:</p>
       <div style={{ marginLeft: '20px' }}>
         <p>Evolved from:</p>
-        <ul>
+        
           {Object.entries(pokemon.evolvedFrom).map(([id, niveau,]) => (
             <li key={id}>#{`${id}: ${niveau}`}</li>
           ))}
-        </ul>
+        
       </div>
 
       <div style={{ marginLeft: '20px' }}>
         <p>Evolved to:</p>
-        <ul>
+        
           {Object.entries(pokemon.evolvesTo).map(([id, niveau]) => (
             <li key={id}>#{`${id}: ${niveau}`}</li>
           ))}
-        </ul>
+        
       </div>
-      <button onClick={onBackClick} style={{ fontSize: '20px', padding: '10px' }} >Retour</button>
+      </div>
+      <button onClick={onBackClick} className='backbutton' >Retour</button>
     </div>
   );
 };
